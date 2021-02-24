@@ -3,7 +3,8 @@ services:
   db:
     build:
       context: .
-    dockerfile: ./docker/mysql/Dockerfile
+      dockerfile: ./docker/mysql/Dockerfile
+    container_name: mysql_container
     ports:
       - "3306:3306"
     volumes:
@@ -19,8 +20,9 @@ services:
     build:
       context: .
       dockerfile: ./docker/go/Dockerfile
+    container_name: api_container
     volumes:
-      - ./:/app/go
+      - ./:/go/src/github.com/H-J-Ainashi/CATech-RESTwithGolang
     ports:
       - "8080:8080"
     depends_on:
