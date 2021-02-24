@@ -2,8 +2,8 @@ package infrastructure
 
 import (
 	"github.com/H-J-Ainashi/CATech-RESTwithGolang/interfaces/controllers"
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
+	"github.com/labstack/labstack/echo"
+	"github.com/labstack/labstack/echo/middleware"
 )
 
 func Init() {
