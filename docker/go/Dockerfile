@@ -4,11 +4,12 @@ ENV GO111MODULE=on
 
 WORKDIR /go/src/github.com/H-J-Ainashi/CATech-RESTwithGolang
 
-# COPY go.mod go.sum ./
+COPY go.mod go.sum ./
+RUN go mod download
 
 COPY . .
-RUN go mod init github.com/H-J-Ainashi/CATech-RESTwithGolang
-RUN go mod download
+# RUN go mod init github.com/H-J-Ainashi/CATech-RESTwithGolang
+# RUN go mod download
 
 RUN go build .
 
