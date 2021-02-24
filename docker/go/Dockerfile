@@ -4,12 +4,12 @@ FROM golang:1.15.8-alpine
 
 WORKDIR /go/src/github.com/H-J-Ainashi/CATech-RESTwithGolang
 
- # COPY go.mod go.sum ./
- # RUN go mod download
+  COPY go.mod go.sum ./
+  RUN go mod download
 
 COPY . .
-RUN go mod init github.com/H-J-Ainashi/CATech-RESTwithGolang
-RUN go mod download
+#RUN go mod init github.com/H-J-Ainashi/CATech-RESTwithGolang
+#RUN go mod download
 
 # RUN apk add git \
 #    && go get -u -t -v github.com/jinzhu/gorm \
